@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_package = "com.editor.appcha.protobuf";
+
+package appcha;
+
+message Hello {
+  string message = 1;
+}
