@@ -13,6 +13,7 @@ service GreeterService {
 message HelloRequest {
   string name = 1;
 }
+
 message HelloResponse {
   Hello hello = 1;
 }
