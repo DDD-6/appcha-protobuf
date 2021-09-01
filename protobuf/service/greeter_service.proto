@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-option java_package = "com.editor.appcha.grpc";
-
 package appcha;
+
+option java_package = "com.editor.appcha.grpc";
 
 import "model/hello.proto";
 
