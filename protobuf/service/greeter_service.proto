@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package appcha;
+
+option java_package = "com.editor.appcha.grpc";
+
+import "model/hello.proto";
+
+service GreeterService {
+  rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  Hello hello = 1;
+}
