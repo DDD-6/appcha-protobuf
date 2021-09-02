@@ -3,6 +3,7 @@ syntax = "proto3";
 package appcha;
 
 option java_package = "com.editor.appcha.protobuf";
+option java_outer_classname = "HelloProto";
 
 message Hello {
   string message = 1;
