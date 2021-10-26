@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package appcha;
+
+option java_package = "com.editor.appcha.protobuf";
+option java_outer_classname = "BoardProto";
+
+import "user.proto";
+
+message Board {
+    enum Category {
+        UNKNOWN_CATEGORY = 0;
+        HOW_ABOUT = 1;
+        LIKE_THIS = 2;
+        HOW_TO_USE = 3;
+        QNA = 4;
+    }
+
+    string id = 1;
+    string title = 2;
+    User author = 3;
+    int32 comment_count = 4;
+    Category category = 5;
+    int64 created_at = 6;
+}
+
+message BoardComment {
+    string board_id = 1;
+    User author = 2;
+    string comment = 3;
+    int64 created_at = 4;
+}

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package appcha;
+
+option java_package = "com.editor.appcha.protobuf";
+option java_outer_classname = "UserProto";
+
+import "common.proto";
+
+message User {
+    string id = 1;
+    string nickname = 2;
+    Profile profile = 3;
+}
+
+message Profile {
+    string nickname = 1;
+    StringValue image_url = 2;
+}

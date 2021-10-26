@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package appcha;
+
+option java_package = "com.editor.appcha.protobuf";
+option java_outer_classname = "AppProto";
+
+import "feed.proto";
+import "board.proto";
+
+message App {
+    string id = 1;
+    string name = 2;
+    string description = 3;
+    string image_url = 4;
+    string market_url = 5;
+}
+
+message AppDetail {
+    App app = 1;
+    repeated Feed feeds = 2;
+    repeated Board boards = 3;
+}
