@@ -9,8 +9,7 @@ import "common.proto";
 
 message User {
     string id = 1;
-    string nickname = 2;
-    Profile profile = 3;
+    Profile profile = 2;
 }
 
 message Profile {
