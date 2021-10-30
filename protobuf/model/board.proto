@@ -5,7 +5,7 @@ package appcha;
 option java_package = "com.editor.appcha.protobuf";
 option java_outer_classname = "BoardProto";
 
-import "user.proto";
+import "model/user.proto";
 
 message Board {
   string id = 1;
