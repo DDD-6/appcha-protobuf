@@ -5,8 +5,8 @@ package appcha;
 option java_package = "com.editor.appcha.protobuf";
 option java_outer_classname = "FeedProto";
 
-import "app.proto";
-import "user.proto";
+import "model/app.proto";
+import "model/user.proto";
 
 message Feed {
   string id = 1;
