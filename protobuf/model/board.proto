@@ -8,25 +8,18 @@ option java_outer_classname = "BoardProto";
 import "user.proto";
 
 message Board {
-    enum Category {
-        UNKNOWN_CATEGORY = 0;
-        HOW_ABOUT = 1;
-        LIKE_THIS = 2;
-        HOW_TO_USE = 3;
-        QNA = 4;
-    }
-
-    string id = 1;
-    string title = 2;
-    User author = 3;
-    int32 comment_count = 4;
-    Category category = 5;
-    int64 created_at = 6;
+  string id = 1;
+  string title = 2;
+  User author = 3;
+  int32 comment_count = 4;
+  string body = 5;
+  string image_url = 6;
+  int64 created_at = 7;
 }
 
 message BoardComment {
-    string board_id = 1;
-    User author = 2;
-    string comment = 3;
-    int64 created_at = 4;
+  string board_id = 1;
+  User author = 2;
+  string comment = 3;
+  int64 created_at = 4;
 }

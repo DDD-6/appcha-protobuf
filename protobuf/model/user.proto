@@ -5,14 +5,14 @@ package appcha;
 option java_package = "com.editor.appcha.protobuf";
 option java_outer_classname = "UserProto";
 
-import "common.proto";
+import "google/protobuf/wrappers.proto";
 
 message User {
-    string id = 1;
-    Profile profile = 2;
+  string id = 1;
+  Profile profile = 2;
 }
 
 message Profile {
-    string nickname = 1;
-    StringValue image_url = 2;
+  string nickname = 1;
+  google.protobuf.StringValue image_url = 2;
 }

@@ -7,15 +7,15 @@ option java_package = "com.editor.appcha.grpc";
 import "model/user.proto";
 
 service UserService {
-    rpc Login (LoginRequest) returns (LoginResponse);
-    rpc Logout (LogoutRequest) returns (LogoutResponse);
+  rpc Login (LoginRequest) returns (LoginResponse);
+  rpc Logout (LogoutRequest) returns (LogoutResponse);
 }
 
 message LoginRequest {
-    string access_token = 1; // kakao access token
+  string kakao_access_token = 1;
 }
 message LoginResponse {
-    string token = 1; // appcha server token
+  string access_token = 1;
 }
 
 message LogoutRequest {
