@@ -15,10 +15,3 @@ message App {
   string image_url = 4;
   string market_url = 5;
 }
-
-message AppDetail {
-  string id = 1;
-  string name = 2;
-  repeated Feed feeds = 3;
-  repeated Board boards = 4;
-}

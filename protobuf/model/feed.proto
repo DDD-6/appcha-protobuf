@@ -30,10 +30,7 @@ message FeedDetail {
 message FeedBody {
   oneof data {
     string text = 1;
-    string head_1 = 2;
-    string head_2 = 3;
-    string tag = 4;
-    string image_url = 5;
-    App app = 6;
+    string image_url = 2;
+    App app = 3;
   }
 }
