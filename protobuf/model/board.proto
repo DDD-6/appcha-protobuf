@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package appcha;
+
+option java_package = "com.editor.appcha.protobuf";
+option java_outer_classname = "BoardProto";
+
+import "user.proto";
+
+message Board {
+  string id = 1;
+  string title = 2;
+  User author = 3;
+  int32 comment_count = 4;
+  string body = 5;
+  string image_url = 6;
+  int64 created_at = 7;
+}
+
+message BoardComment {
+  string board_id = 1;
+  User author = 2;
+  string comment = 3;
+  int64 created_at = 4;
+}

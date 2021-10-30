@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package appcha;
+
+option java_package = "com.editor.appcha.grpc";
+
+import "model/user.proto";
+
+service UserService {
+  rpc Login (LoginRequest) returns (LoginResponse);
+  rpc Logout (LogoutRequest) returns (LogoutResponse);
+}
+
+message LoginRequest {
+  string kakao_access_token = 1;
+}
+message LoginResponse {
+  string access_token = 1;
+}
+
+message LogoutRequest {
+}
+message LogoutResponse {
+}

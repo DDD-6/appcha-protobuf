@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package appcha;
+
+option java_package = "com.editor.appcha.protobuf";
+option java_outer_classname = "FeedProto";
+
+import "app.proto";
+import "user.proto";
+
+message Feed {
+  string id = 1;
+  string title = 2;
+  string author_nickname = 3;
+  string summary = 4;
+  string thumbnail_image_url = 5;
+  repeated App apps = 6;
+}
+
+message FeedDetail {
+  string id = 1;
+  string title = 2;
+  string author_nickname = 3;
+  // 본문 리스트
+  repeated FeedBody body_list = 4;
+  // 해당 회원이 좋아요를 했는지 여부
+  bool is_upvote = 5;
+}
+
+message FeedBody {
+  oneof data {
+    string text = 1;
+    string image_url = 2;
+    App app = 3;
+  }
+}
